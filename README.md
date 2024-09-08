@@ -61,7 +61,15 @@ This will start the server at `http://localhost:3000`. You can now open your bro
 
 ### 5. Run tests
 
-This project has tests implemented using RSpec. To run the tests, use the following command:
+This project has tests implemented using RSpec.
+
+To test the project, run to create the test database:
+
+```bash
+rails db:test:prepare
+```
+
+To run the tests, use the following command:
 
 ```bash
 rspec
