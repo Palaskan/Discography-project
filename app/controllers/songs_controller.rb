@@ -64,8 +64,8 @@ class SongsController < ApplicationController
     end
 
     def load_authors_and_lps
-      @lps = Lp.all # Carga todos los LPs disponibles
-      @authors = Author.all # Carga todos los autores
+      @lps = Lp.all
+      @authors = Author.all
     end
 
     # Only allow a list of trusted parameters through.
