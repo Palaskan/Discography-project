@@ -1,0 +1,30 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Lps</h1>
+
+<div id="lps">
+  <div class="row">
+   <div class="col">
+      <%= form_with url: lps_path, method: :get, data: {turbo_frame: "lp_table_frame"} do |form| %>
+        <div class="input-group mb-3">
+          <%= form.text_field :artist_name, value: params[:artist_name], placeholder: "Search by artist name", class: "form-control" %>
+          <div class="input-group-append">
+            <%= form.submit "Search", class: "btn btn-outline-secondary" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="col">
+      <%= link_to "New lp", new_lp_path, class: 'btn btn-success' %>
+    </div>
+    
+  </div>
+  
+
+  <%= turbo_frame_tag "lp_table_frame" do %>
+    <%= render partial: 'lp_table', locals: { lps: @lps } %>
+  <% end %>
+
+  
+</div>

@@ -1,0 +1,18 @@
+<div id="<%= dom_id artist %>">
+
+  <h1><%= artist.name %></h1>
+
+  <div>
+    <p>
+      <strong>Description:</strong>
+      <%= artist.description %>
+    </p>
+
+    <p>
+      <strong>Total LPs:</strong>
+      <%= artist.lps.count %> <%= link_to 'View LPs', lps_path(artist_id: artist.id), class: 'btn btn-primary' %>
+    </p>
+
+  </div>
+
+</div>

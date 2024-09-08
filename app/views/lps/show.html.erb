@@ -1,0 +1,9 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @lp %>
+
+<div>
+  <%= link_to "Edit this lp", edit_lp_path(@lp), class: "btn btn-warning" %> 
+  <%= link_to 'Destroy this lp', author_path(@lp),
+                method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
+</div>

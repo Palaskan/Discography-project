@@ -1,0 +1,9 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @song %>
+
+<div>
+  <%= link_to "Edit this song", edit_song_path(@song), class: "btn btn-warning" %> 
+  <%= link_to 'Destroy this song', author_path(@song),
+                method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
+</div>

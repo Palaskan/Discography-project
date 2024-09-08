@@ -1,0 +1,9 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @author %>
+
+<div>
+  <%= link_to "Edit this author", edit_author_path(@author), class: "btn btn-warning" %> 
+  <%= link_to 'Destroy this author', author_path(@author),
+                method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
+</div>

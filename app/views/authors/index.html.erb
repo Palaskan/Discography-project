@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Authors</h1>
+
+<div id="authors">
+  <%= link_to "New author", new_author_path, class: 'btn btn-success' %>
+  <table class="table table-striped">
+    <thead>
+        <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @authors.each do |author| %>
+            <tr>
+                <td><%= author.name %></td>
+                <td><%= author.description %></td>
+                <td><%= link_to "Show", author, class: "btn btn-primary" %> <%= link_to 'Edit', edit_author_path(author), class: "btn btn-warning" %> <%= link_to 'Delete', author_path(author),
+                method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %></td>
+            </tr>
+        <% end %>
+    </tbody>
+  </table>
+</div>

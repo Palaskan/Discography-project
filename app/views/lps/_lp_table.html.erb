@@ -1,0 +1,21 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Artist</th>
+        <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @lps.each do |lp| %>
+            <tr>
+                <td><%= lp.name %></td>
+                <td><%= lp.description %></td>
+                <td><%= lp.artist.name %></td>
+                <td><%= link_to "Show", lp, class: "btn btn-primary", data: { turbo: "false" } %> <%= link_to 'Edit', edit_lp_path(lp), class: "btn btn-warning", data: { turbo: "false" } %> <%= link_to 'Delete', lp_path(lp),
+                method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger", data: { turbo: "false" } %></td>
+            </tr>
+        <% end %>
+    </tbody>
+  </table>
